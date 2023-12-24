@@ -1,3 +1,6 @@
+import styled, { createGlobalStyle } from "styled-components";
+
+const Global = createGlobalStyle`
 *,
 *::before,
 *::after {
@@ -7,7 +10,8 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Electrolize-Regular',sans-serif;
+  background-color:black; 
 }
 
 ul {
@@ -27,10 +31,6 @@ button {
   border: none;
   cursor: pointer;
 }
+`
 
-.container {
-  max-width: 100%;
-  width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+export default Global

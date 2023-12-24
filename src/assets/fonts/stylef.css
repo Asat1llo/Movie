@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Electrolize-Regular';
+    src: url('Electrolize-Regular.woff'),
+    url('Electrolize-Regular.woff2');
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gurajada';
+    src: url('Gurajada.woff'),
+    url('Gurajada.woff2');
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Homenaje';
+    src: url('Homenaje-Regular.woff'),
+    url('Homenaje-Regular.woff2');
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Imprima';
+    src: url('Imprima-Regular.woff'),
+    url('Imprima-Regular.woff2');
+    font-weight: normal;
+    font-display: swap;
+    font-style: normal;
+}
