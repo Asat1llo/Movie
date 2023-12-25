@@ -1,6 +1,7 @@
-import { Section, HeaderWrraper, Logo, HeaderList, HeaderLink, HeaderContainer } from './header.js'
-import { Container } from '../../Container.js'
+import { HeaderWrraper, Logo, HeaderList, HeaderLink, HeaderContainer, HeaderBtn } from './header.js'
+import { Container,Section } from '../../Container.js'
 import HeaderSearch from './header_search/header_search.jsx'
+import HeaderSelect from './header_select/header_select.jsx'
 
 import headerlogo from "../../assets/svg/header/logo.svg"
 
@@ -19,6 +20,8 @@ function Header() {
                     </HeaderList>
                     <HeaderContainer>
                         <HeaderSearch />
+                        <HeaderSelect/>
+                        <HeaderBtn>SIGN IN</HeaderBtn>
                     </HeaderContainer>
                 </HeaderWrraper>
             </Container>

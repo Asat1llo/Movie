@@ -5,11 +5,10 @@ const getactive = ({ active }) => {
         case 'class1': return `
         width:200px;
         height:30px;
-        border-radius:5px;
-        border:none;
-        transition: 0.4s linear;
+        border-radius:7px;
         background-color:transparent;
         color:white;    
+        transition: all 1s;
         &:focus{
             outline:none;
         }
@@ -18,48 +17,51 @@ const getactive = ({ active }) => {
         width:15px;
         height:15px;
         border-radius:50%;
-        transition: 0.4s linear;
+        transition: all 1s;
         transform: translate(-10px)
         background-color:transparent;
         cursor:pointer;
-
+        &:focus{
+            outline:none;
+        }
         `
-   
-      
         default: return `
         width:15px;
         height:15px;
         border-radius:50%;
         background-color:transparent;
+        cursor:pointer;
+        &:focus{
+            outline:none;
+        }
         `
     }
 
 }
 
-const getStick = ({stick})=>{
-    switch (stick) {
-        case 'stick1': return `
-        display:inline-block;
-        width:3px;
-        height:10px;
-        background-color:white;
-        transform:rotate(-40deg) translate(-7px,6px);
+const getImg = ({active2}) => {
+    switch (active2) {
+        case 'search1': return `
+        position:absolute;
+        z-index:-1;
+        width:35px;
+        transform:translate(5px,3px); 
+        transition:all 1s;
         `
-          
-        case 'stick2': return `
-        display:inline-block;
-        width:3px;
-        height:25px;
-        background-color:white;
-        transform:rotate(-50deg) translate(-12px,18px);
-        transition: 0.4s linear;
-        `      
+
+        case 'search2': return `
+        position:absolute;
+        z-index:1;
+        transform:translate(90px,2px); 
+        transition:all 1s;
+        `
+
         default: return `
-        display:inline-block;
-        width:2px;
-        height:8px;
-        background-color:white;
-        transform:rotate(-40deg) translate(-7px,6px);
+        position:absolute;
+        z-index:-1;
+        width:35px;
+        transform:translate(5px,3px); 
+        transition:all 2s;  
         `
     }
 }
@@ -68,14 +70,15 @@ export const SearchWrraper = styled.div`
  display:flex;
  justify-content:center;
  align-items:center;
-//  background-color:red;
  cursor:pointer;
+ position:relative;
+ background-color:transparent;
 `
 export const SearchRol = styled.input`
 ${getactive}
 border: 1px solid white;
 `
 
-export const SearchStick = styled.div`
- ${getStick}
+export const SearchImg = styled.img`
+ ${getImg}
 `

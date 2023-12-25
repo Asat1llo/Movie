@@ -11,7 +11,6 @@ const Global = createGlobalStyle`
 
 body {
   font-family: 'Electrolize-Regular',sans-serif;
-  background-color:black; 
 }
 
 ul {
