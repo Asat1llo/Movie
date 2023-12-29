@@ -1,11 +1,6 @@
 import styled from "styled-components";
+import bgcard from './assets/img/cards/bg_cards.png'
 
-export const Container = styled.div`
-    max-width: 100%;
-    width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-` 
 
 const getSection = ({section})=>{
    switch (section) {
@@ -16,6 +11,12 @@ const getSection = ({section})=>{
      right:0;
      z-index:2;
     `
+    case 'section_card':return`
+    background-image:url(${bgcard});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    `
 
     default:return``
    }
@@ -24,3 +25,10 @@ const getSection = ({section})=>{
 export const Section = styled.section`
 ${getSection}
 `
+
+export const Container = styled.div`
+    max-width: 100%;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+` 

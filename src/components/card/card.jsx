@@ -1,16 +1,18 @@
 import { Container, Section } from '../../Container.js'
-import {CardSection,CardWrraper} from './card.js'
+import {CardWrraper} from './card.js'
 import CardsHeader from './cards_header/cards_header.jsx'
+import CardsContainer from './cards_container/cards_container.jsx'
 
 function Card(){
     return(
-          <CardSection >
+          <Section section={'section_card'} >
             <Container>
             <CardWrraper>
                 <CardsHeader/>
+                <CardsContainer/>
             </CardWrraper>
             </Container>
-          </CardSection>
+          </Section>
     )
 }
 

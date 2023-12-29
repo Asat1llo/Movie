@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+span{
+  display:inline-block;
+}
+
 img {
   display: inline-block;
 }

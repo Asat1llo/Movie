@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const CardsHeaderWrraper = styled.div`
- display:flex;
- justify-content:space-between;
- align-items:center;
-`
 
 const getContinaerHeader = ({ header }) => {
     switch (header) {
@@ -18,7 +13,7 @@ const getContinaerHeader = ({ header }) => {
         case 'header2': return `
         display:flex;
         justify-content:center;
-        align-items:center;
+        align-items:end;
         gap:22px;
         `
         default: return `
@@ -69,6 +64,13 @@ const getHeaderLorem = ({ lorem }) => {
         `
     }
 }
+
+
+export const CardsHeaderWrraper = styled.div`
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+`
 
 export const CardsHeaderContainer = styled.div`
 ${getContinaerHeader}
