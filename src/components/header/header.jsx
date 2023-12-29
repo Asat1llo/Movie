@@ -7,7 +7,7 @@ import headerlogo from "../../assets/svg/header/logo.svg"
 
 function Header() {
     return (
-        <Section>
+        <Section section={'section_header'}>
             <Container>
                 <HeaderWrraper>
                     <Logo src={headerlogo} />

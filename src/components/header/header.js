@@ -1,8 +1,4 @@
-import { Exception } from "sass";
 import styled from "styled-components";
-
-
-export const Section = styled.section``
 
 export const HeaderWrraper = styled.header`
 display:flex;

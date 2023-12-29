@@ -1,13 +1,13 @@
-import { Container } from '../../Container.js'
-import { MainWrraper, SectionMain } from './main.js'
+import { Container, Section } from '../../Container.js'
+import { MainWrraper } from './main.js'
 import MainSwiper from './main_swiper/main_swiper.jsx'
 
 
 function Main() {
     return (
-        <SectionMain>
+        <Section>
             <MainSwiper />
-        </SectionMain>
+        </Section>
     )
 }
 

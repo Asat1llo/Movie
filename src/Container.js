@@ -7,5 +7,20 @@ export const Container = styled.div`
     padding: 0 20px;
 ` 
 
+const getSection = ({section})=>{
+   switch (section) {
+    case 'section_header':return`
+     position:fixed;
+     top:0;
+     left:0;
+     right:0;
+     z-index:2;
+    `
 
-export const Section = styled.section``
+    default:return``
+   }
+}
+
+export const Section = styled.section`
+${getSection}
+`
