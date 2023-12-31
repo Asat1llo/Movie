@@ -17,7 +17,7 @@ const MainSwiper = () => {
             spaceBetween={0}
             centeredSlides={true}
             autoplay={{
-                delay: 2500,
+                delay: 5500,
                 disableOnInteraction: false,
             }}
             modules={[Autoplay]}
