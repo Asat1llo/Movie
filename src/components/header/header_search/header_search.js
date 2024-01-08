@@ -6,7 +6,7 @@ const getactive = ({ active }) => {
         width:200px;
         height:30px;
         border-radius:7px;
-        background-color:transparent;
+        border-color:white;
         color:white;    
         transition: all 1s;
         &:focus{
@@ -17,8 +17,8 @@ const getactive = ({ active }) => {
         width:15px;
         height:15px;
         border-radius:50%;
+        border-color: white;
         transition: all 1s;
-        transform: translate(-10px)
         background-color:transparent;
         cursor:pointer;
         &:focus{
@@ -29,6 +29,7 @@ const getactive = ({ active }) => {
         width:15px;
         height:15px;
         border-radius:50%;
+        border-color:white;
         background-color:transparent;
         cursor:pointer;
         &:focus{
