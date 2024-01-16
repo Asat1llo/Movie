@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const getactive = ({ active }) => {
     switch (active) {
-        case 'class1': return `
+        case 'class1': return`
         width:200px;
         height:30px;
         border-radius:7px;
-        background-color:red;
+        background-color:transparent;
         border-color:white;
         color:white;    
         transition: all 1s;

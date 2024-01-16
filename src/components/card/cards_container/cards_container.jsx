@@ -1,10 +1,12 @@
 import { ContainerWrraper, CardsWrraper, CardsDesc, CardsSpan, CardsContainerImg } from './cards_container.js'
+import { NavLink as Link } from 'react-router-dom'
 
 import cards1 from '../../../assets/img/cards/cards_img.png'
 
 const CardsContainer = () => {
     return (
         <ContainerWrraper>
+            <Link to={'cardinner'}>
             <CardsWrraper>
                 <CardsContainerImg src={cards1}/>
                 <CardsDesc desc={'desc_wrraper'}>
@@ -19,6 +21,7 @@ const CardsContainer = () => {
                     </CardsDesc>
                 </CardsDesc>
             </CardsWrraper>
+            </Link>
             <CardsWrraper>
                 <CardsContainerImg src={cards1}/>
                 <CardsDesc desc={'desc_wrraper'}>

@@ -1,16 +1,20 @@
 import { Route, Routes } from 'react-router-dom'
 import Global from './App.js'
 import Header from './components/header/header.jsx'
-import Main from './components/main/main.jsx'
-import Card from './components/card/card.jsx'
+import Home from './components/pages/home/home.jsx'
+import CardInner from './components/pages/card_inner/card_inner.jsx'
+import Admin from './components/pages/admin/admin.jsx'
 
 function App() {
 
   return (
     <>
       <Header />
-      <Main/>
-      <Card/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/cardinner' element={<CardInner/>}/>
+        <Route path='/admin' element={<Admin/>}/>
+      </Routes>
       <Global />
     </>
   )

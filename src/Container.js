@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import bgcard from './assets/img/cards/bg_cards.png'
+import inner from './assets/img/cards/cards_img.png' 
 
 
 const getSection = ({section})=>{
@@ -17,6 +18,14 @@ const getSection = ({section})=>{
     background-size: cover;
     background-repeat: no-repeat;
     `
+    case 'CardInner':return`
+     background-image:url(${inner});
+     background-size: cover;
+     background-repeat: no-repeat;
+    `
+    case 'admin':return`
+    background-color:black;
+    `
 
     default:return``
    }
@@ -32,3 +41,5 @@ export const Container = styled.div`
     margin: 0 auto;
     padding: 0 20px;
 ` 
+
+export const Img = styled.img``

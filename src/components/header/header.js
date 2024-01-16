@@ -11,7 +11,7 @@ export const Logo = styled.img``
 export const HeaderList = styled.ul`
  display:flex;
  justify-content:center;
- alig-items:center;
+ align-items:center;
  gap:27px;
 `
 
@@ -22,6 +22,7 @@ font-size: 17.589px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+cursor: pointer;
 `
 export const HeaderContainer = styled.div`
  display:flex;
