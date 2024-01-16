@@ -6,6 +6,7 @@ const getactive = ({ active }) => {
         width:200px;
         height:30px;
         border-radius:7px;
+        background-color:red;
         border-color:white;
         color:white;    
         transition: all 1s;
