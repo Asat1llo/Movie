@@ -23,10 +23,6 @@ const getSection = ({section})=>{
      background-size: cover;
      background-repeat: no-repeat;
     `
-    case 'admin':return`
-    background-color:black;
-    `
-
     default:return``
    }
 }
