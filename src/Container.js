@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import bgcard from './assets/img/cards/bg_cards.png'
-import inner from './assets/img/cards/cards_img.png' 
 
 
 const getSection = ({section})=>{

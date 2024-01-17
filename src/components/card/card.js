@@ -7,6 +7,12 @@ export const CardWrraper = styled.div`
  display:flex;
  flex-direction:column;
  gap:48px;
-//  justify-content:center;
-//  align-items:start;
+`
+
+export const ContainerWrraper = styled.div`
+display: flex;
+flex-wrap: wrap;
+ justify-content:space-between;
+ align-items:center; 
+ gap:43px;
 `

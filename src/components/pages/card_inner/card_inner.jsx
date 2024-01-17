@@ -6,7 +6,6 @@ import calendar from './../../../assets/svg/main/calender.svg'
 import share from './../../../assets/svg/inner-card/share.svg'
 import start from './../../../assets/svg/inner-card/start.svg'
 import play from './../../../assets/svg/inner-card/play-small.svg'
-import free from './../../../assets/img/cards/cards_img.png'
 
 const CardInner = ()=>{
     return(

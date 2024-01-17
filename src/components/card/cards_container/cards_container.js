@@ -82,13 +82,7 @@ const getCardsSpan = ({ cardsspan }) => {
 
 
 
-export const ContainerWrraper = styled.div`
- display:flex;
- flex-wrap:wrap;
- justify-contetn:center;
- align-items:center; 
- gap:43px;
-`
+
 
 export const CardsWrraper = styled.div`
 display:flex;
@@ -109,4 +103,7 @@ ${getCardsSpan}
 `
 
 
-export const CardsContainerImg = styled.img``
+export const CardsContainerImg = styled.img`
+width: 294.977px;
+height: 391.691px;
+`
