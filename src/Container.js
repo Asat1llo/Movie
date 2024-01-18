@@ -17,11 +17,6 @@ const getSection = ({section})=>{
     background-size: cover;
     background-repeat: no-repeat;
     `
-    case 'CardInner':return`
-     background-image:url(${inner});
-     background-size: cover;
-     background-repeat: no-repeat;
-    `
     default:return``
    }
 }

@@ -4,7 +4,7 @@ import { NavLink as Link } from 'react-router-dom'
 
 const CardsContainer = ({item}) => {
     return (
-            <Link to={'cardinner'}>
+            <Link to={`/cardinner/${item.id}`}>
             <CardsWrraper >
                 <CardsContainerImg src={item.img}/>
                 <CardsDesc desc={'desc_wrraper'}>

@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/cardinner' element={<CardInner/>}/>
+        <Route path='/cardinner/:cardId' element={<CardInner/>}/>
         <Route path='/admin' element={<Admin/>}/>
       </Routes>
       <Global />

@@ -1,12 +1,17 @@
 import styled from "styled-components";
 
+export const CSection = styled.section`
+background-image:url(${({bg})=>bg});
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+`
 
 export const CardInnerWrraper = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
 gap: 5vw;
-/* background-color: black; */
 padding: 193px 0px 136px 0px;
 `
 
@@ -147,6 +152,7 @@ const CardInnerContainerClass = ({container})=>{
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        cursor:pointer;
         `
         case 'about' : return`
         color: #FFF;
@@ -165,3 +171,53 @@ const CardInnerContainerClass = ({container})=>{
  export const CardInnerContainerSpan = styled.span`
   ${CardInnerContainerSpanCalaa}
  `
+
+ export const CardInnerImg = styled.img`
+ width: 314.672px;
+ height: 426px;
+ `
+
+
+const play = ({playvideo})=>{
+    switch (playvideo) {
+        case 'playOn':return`
+        width: 650px;
+        height: 400px;
+        border-radius: 15px;
+        position: fixed;
+        top:25%;
+        left:25%;
+        bottom:0;
+        right:0;
+        background-color: red;
+        `
+        case 'playOf':return`
+          width: 650px;
+          height: 400px;
+          border-radius: 15px;
+          position: fixed;
+          top:-61%;
+          left:25%;
+          bottom:0;
+          right:0;
+          background-color: red;
+         `    
+        default:return`
+         width: 650px;
+         height: 400px;
+         border-radius: 15px;
+         position: fixed;
+         top:-61%;
+         left:25%;
+         bottom:0;
+         right:0;
+         background-color: red;
+        `
+    }
+}
+
+
+export const CardInnerVideo = styled.div`
+${play}
+
+`
