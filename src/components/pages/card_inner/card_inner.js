@@ -70,14 +70,6 @@ const CardInnerContainerClass = ({container})=>{
         font-weight: 400;
         line-height: 69.5%;
         `
-        case 'name2':return`
-        color: #FFF;
-        font-family: 'Gurajada', sans-serif;
-        font-size: 95.455px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 69.5%;
-        `
         case 'movie': return`
         padding:3.41px 3.41px 5.89px 6.82px;
         background-color:white;
@@ -113,6 +105,10 @@ const CardInnerContainerClass = ({container})=>{
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        display:flex;
+        justify-content:center;
+        alig-items:center;
+        gap:0.4vw;
         `
         case 'share':return`
         display:flex;
@@ -178,25 +174,29 @@ const CardInnerContainerClass = ({container})=>{
  `
 
 
-const play = ({playvideo})=>{
-    switch (playvideo) {
-        case 'playOn':return`
+const play = ({player})=>{
+    switch (player) {
+        case 'playOn': return`
         width: 650px;
         height: 400px;
         border-radius: 15px;
-        position: fixed;
+        padding:15px;
+        position: absolute;
+        transition: all 1s;
         top:25%;
         left:25%;
         bottom:0;
         right:0;
         background-color: red;
         `
-        case 'playOf':return`
+        case 'playOf': return`
           width: 650px;
           height: 400px;
           border-radius: 15px;
-          position: fixed;
-          top:-61%;
+          padding:15px;
+          position: absolute;
+          transition: all 1s;
+          top:-62%;
           left:25%;
           bottom:0;
           right:0;
@@ -205,13 +205,15 @@ const play = ({playvideo})=>{
         default:return`
          width: 650px;
          height: 400px;
+         padding:15px;
          border-radius: 15px;
-         position: fixed;
-         top:-61%;
+         background-color: red;
+         position: absolute;
+         transition: all 1s;
+         top:-62%;
          left:25%;
          bottom:0;
          right:0;
-         background-color: red;
         `
     }
 }
@@ -219,5 +221,4 @@ const play = ({playvideo})=>{
 
 export const CardInnerVideo = styled.div`
 ${play}
-
 `

@@ -32,4 +32,19 @@ export const Container = styled.div`
     padding: 0 20px;
 ` 
 
-export const Img = styled.img``
+
+const img = ({img})=>{
+    switch (img) {
+        case 'close':return`
+         position:absolute;
+         left:98%;
+         top:-4%;
+         cursor:pointer;
+        `
+        default:return``
+    }
+}
+
+export const Img = styled.img`
+${img}
+`

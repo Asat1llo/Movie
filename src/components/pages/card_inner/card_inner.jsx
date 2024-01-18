@@ -9,12 +9,14 @@ import calendar from './../../../assets/svg/main/calender.svg'
 import share from './../../../assets/svg/inner-card/share.svg'
 import start from './../../../assets/svg/inner-card/start.svg'
 import play from './../../../assets/svg/inner-card/play-small.svg'
+import close from './../../../assets/img/cards/close.png'
 
 const CardInner = ()=>{
 
     const {cardId} = useParams()
-    const[data, setData]= useState([])
-    const[playvideo, setPlayVideo]= useState('playOf')
+    const [data, setData]= useState([])
+    const [playvideo, setPlayVideo]= useState()
+    const [playt , setPlayt] = useState(false)
 
   useEffect(()=>{
     fetch(`https://64c9fecab2980cec85c2b76e.mockapi.io/movie/movie/${cardId}`)
@@ -43,12 +45,19 @@ const CardInner = ()=>{
                         <CardInnerContainer container={'container4'}>
                             <CardInnerContainerSpan span={'share'}><Img src={share}/>Share</CardInnerContainerSpan>
                             <CardInnerContainerSpan span={'rate'}><Img src={start}/>{data.rating}</CardInnerContainerSpan>
-                            <CardInnerContainerSpan span={'button'} onClick={()=>{setPlayVideo('playOn')}}><Img src={play}/>PLAY NOW</CardInnerContainerSpan>
+                            <CardInnerContainerSpan span={'button'} onClick={()=>{
+                                setPlayt(true)
+                                setPlayVideo('playOn')
+                                }}><Img src={play} onClick={()=>setPlayVideo('playOn')}/>PLAY NOW</CardInnerContainerSpan>
                         </CardInnerContainer>
                         <CardInnerContainerSpan span={'about'}>Ryan Reynolds as Guy / Blue Shirt Guy, a bank teller and non-player character (NPC) in Free City who is initially unaware that he is a video game character.</CardInnerContainerSpan>
                     </CardInnerContainer>
                     <CardInnerVideo player={playvideo}>
-                    <ReactPlayer url={data.url} controls={true}/>
+                        <Img img={'close'} src={close} onClick={()=>{
+                            setPlayt(false)
+                            setPlayVideo('playOf')
+                            }}/>
+                    <ReactPlayer url={data.trailer} controls={true} playing={playt} />
                     </CardInnerVideo>
                 </CardInnerWrraper>
             </Container>
