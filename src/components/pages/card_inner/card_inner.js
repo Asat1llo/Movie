@@ -180,9 +180,8 @@ const play = ({player})=>{
         width: 650px;
         height: 400px;
         border-radius: 15px;
-        padding:15px;
         position: absolute;
-        transition: all 1s;
+        transition: 0.4s linear;
         top:25%;
         left:25%;
         bottom:0;
@@ -193,9 +192,8 @@ const play = ({player})=>{
           width: 650px;
           height: 400px;
           border-radius: 15px;
-          padding:15px;
           position: absolute;
-          transition: all 1s;
+          transition: 0.4s linear;
           top:-62%;
           left:25%;
           bottom:0;
@@ -205,11 +203,10 @@ const play = ({player})=>{
         default:return`
          width: 650px;
          height: 400px;
-         padding:15px;
          border-radius: 15px;
          background-color: red;
          position: absolute;
-         transition: all 1s;
+         transition: 0.4s linear;
          top:-62%;
          left:25%;
          bottom:0;

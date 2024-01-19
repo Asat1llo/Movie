@@ -24,6 +24,9 @@ const CardInner = ()=>{
     .then((data)=>setData(data))
   },[])
 
+  const css = {
+    borderRadius:'15px',
+  }
 
     return(
         <CSection bg={data.img}>
@@ -57,7 +60,7 @@ const CardInner = ()=>{
                             setPlayt(false)
                             setPlayVideo('playOf')
                             }}/>
-                    <ReactPlayer url={data.trailer} controls={true} playing={playt} />
+                    <ReactPlayer url={data.trailer} controls={true} playing={playt} width={650} height={400} style={css}/>
                     </CardInnerVideo>
                 </CardInnerWrraper>
             </Container>
