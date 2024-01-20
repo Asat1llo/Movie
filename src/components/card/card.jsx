@@ -4,7 +4,7 @@ import {CardWrraper, ContainerWrraper} from './card.js'
 import CardsHeader from './cards_header/cards_header.jsx'
 import CardsContainer from './cards_container/cards_container.jsx'
 
-function Card(){
+function Card({giveValue}){
 
    const[data,setData]= useState([])
 
@@ -14,7 +14,11 @@ function Card(){
     .then((data)=>setData(data))
    },[])
 
-   console.log(data);
+   console.log(giveValue);
+
+   const filterData = data.filter(data2 =>{
+    return data2.name.toLowerCase().includes(giveValue.toLowerCase()) 
+   })
 
 
     return(
@@ -24,7 +28,7 @@ function Card(){
                 <CardsHeader/>
                 <ContainerWrraper>
                 {
-                  data.map((item,index)=>{
+                  filterData.map((item,index)=>{
                     return <CardsContainer item={item} key={item.id}/>
                   })
                 }

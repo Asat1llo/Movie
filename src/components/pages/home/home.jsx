@@ -1,11 +1,11 @@
 import Main from '../../main/main.jsx'
 import Card from '../../card/card.jsx'
 
-const Home = ()=>{
+const Home = ({giveValue})=>{
     return(
         <>
         <Main/>
-        <Card/>
+        <Card giveValue={giveValue}/>
         </>
     )
 }
