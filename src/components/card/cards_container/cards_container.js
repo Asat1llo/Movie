@@ -16,13 +16,13 @@ const getCard = ({ desc }) => {
         case 'desc_container_1': return `
         display:flex;
         justify-content:space-between;
-        gap:185px;
+        gap:1vw;
         align-items:center;
         `
         case 'desc_container_2': return `
         display:flex;
         justify-content:space-around;
-        gap:110px;
+        gap:7.12vw;
         align-items:center;
         `
         default: return `display:flex`
@@ -34,6 +34,8 @@ const getCard = ({ desc }) => {
 const getCardsSpan = ({ cardsspan }) => {
     switch (cardsspan) {
         case 'cards_name': return `
+        display:inline-block;
+        width:245px;
         color: #FFF;
         font-family: Electrolize;
         font-size: 18px;
@@ -63,15 +65,19 @@ const getCardsSpan = ({ cardsspan }) => {
         case 'cards_time': return `
         color: #FFF;
         font-family: Imprima;
-        font-size: 10.393px;
+        font-size: 15.393px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        display:flex;
+        justify-content:center;
+        alig-items:center;
+        gap:0.1vw;
         `
         case 'cards_rating': return `
         color: #FFF;
         font-family: Imprima;
-        font-size: 10.393px;
+        font-size: 15.393px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

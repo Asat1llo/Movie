@@ -52,6 +52,7 @@ const getHeaderLorem = ({ lorem }) => {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        cursor:pointer;
         `
 
         default: return `
