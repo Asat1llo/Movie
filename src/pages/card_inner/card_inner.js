@@ -12,7 +12,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 5vw;
-padding: 193px 0px 136px 0px;
+padding: 160px 0px 62px 0px;
 `
 
 const CardInnerContainerClass = ({container})=>{
@@ -69,6 +69,7 @@ const CardInnerContainerClass = ({container})=>{
         font-style: normal;
         font-weight: 400;
         line-height: 69.5%;
+        cursor:pointer;
         `
         case 'movie': return`
         padding:3.41px 3.41px 5.89px 6.82px;

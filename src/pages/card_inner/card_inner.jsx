@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player'
-import { useState,useEffect } from 'react'
+import { useState,useEffect,useRef } from 'react'
 import {Container,Img} from './../../Container.js'
 import { CardInnerWrraper, CardInnerContainer, CardInnerContainerSpan,CardInnerImg,CSection,CardInnerVideo } from './card_inner.js'
 
@@ -12,22 +12,22 @@ import play from './../../assets/svg/inner-card/play-small.svg'
 import close from './../../assets/img/cards/close.png'
 
 const CardInner = ()=>{
-
+    
     const {cardId} = useParams()
     const [data, setData]= useState([])
     const [playvideo, setPlayVideo]= useState()
     const [playt , setPlayt] = useState(false)
-
-  useEffect(()=>{
-    fetch(`https://64c9fecab2980cec85c2b76e.mockapi.io/movie/movie/${cardId}`)
-    .then((res)=>res.json())
-    .then((data)=>setData(data))
-  },[])
-
-  const css = {
-    borderRadius:'15px',
-  }
-
+    
+    useEffect(()=>{
+        fetch(`https://64c9fecab2980cec85c2b76e.mockapi.io/movie/movie/${cardId}`)
+        .then((res)=>res.json())
+        .then((data)=>setData(data))
+    },[])
+    
+    const closeName = data?.name||name.length > 10 ? data?.name.slice(0,10)+'...' : data?.name
+    const [elname, setelName] = useState(`${closeName}`)
+    
+   
     return(
         <CSection bg={data.img}>
             <Container>
@@ -37,7 +37,7 @@ const CardInner = ()=>{
                     </CardInnerContainer>
                     <CardInnerContainer container={'container2'}>
                         <CardInnerContainerSpan span={'episod'}>{data.action}</CardInnerContainerSpan>
-                        <CardInnerContainerSpan span={'name'}>{data.name}</CardInnerContainerSpan>
+                        <CardInnerContainerSpan span={'name'} onMouseEnter={()=>{setelName(data.name)}} onMouseLeave={()=>{setelName(data.name||name.length > 10 ? data.name.slice(0,10)+'...' : data.name)}}>{elname}</CardInnerContainerSpan>
                         <CardInnerContainer container={'container3'}>
                             <CardInnerContainerSpan span={'movie'}>Movie</CardInnerContainerSpan>
                             <CardInnerContainerSpan span={'hd'}>{data.quality}</CardInnerContainerSpan>
@@ -60,7 +60,7 @@ const CardInner = ()=>{
                             setPlayt(false)
                             setPlayVideo('playOf')
                             }}/>
-                    <ReactPlayer url={data.trailer} controls={true} playing={playt} width={650} height={400} style={css}/>
+                    <ReactPlayer url={data.trailer} controls={true} playing={playt} width={650} height={400}/>
                     </CardInnerVideo>
                 </CardInnerWrraper>
             </Container>
