@@ -1,15 +1,15 @@
 import { useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import { useState,useEffect } from 'react'
-import {Container,Img} from '../../../Container.js'
+import {Container,Img} from './../../Container.js'
 import { CardInnerWrraper, CardInnerContainer, CardInnerContainerSpan,CardInnerImg,CSection,CardInnerVideo } from './card_inner.js'
 
-import time from './../../../assets/svg/cards/watch.svg'
-import calendar from './../../../assets/svg/main/calender.svg'
-import share from './../../../assets/svg/inner-card/share.svg'
-import start from './../../../assets/svg/inner-card/start.svg'
-import play from './../../../assets/svg/inner-card/play-small.svg'
-import close from './../../../assets/img/cards/close.png'
+import time from './../../assets/svg/cards/watch.svg'
+import calendar from './../../assets/svg/main/calender.svg'
+import share from './../../assets/svg/inner-card/share.svg'
+import start from './../../assets/svg/inner-card/start.svg'
+import play from './../../assets/svg/inner-card/play-small.svg'
+import close from './../../assets/img/cards/close.png'
 
 const CardInner = ()=>{
 

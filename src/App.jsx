@@ -2,9 +2,9 @@ import { Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
 import Global from './App.js'
 import Header from './components/header/header.jsx'
-import Home from './components/pages/home/home.jsx'
-import CardInner from './components/pages/card_inner/card_inner.jsx'
-import Admin from './components/pages/admin/admin.jsx'
+import Home from './pages/home/home.jsx'
+import CardInner from './pages/card_inner/card_inner.jsx'
+import Admin from './pages/admin/admin.jsx'
 
 function App() {
 

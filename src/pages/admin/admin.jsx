@@ -1,4 +1,4 @@
-import { Container , Section } from '../../../Container.js'
+import { Container , Section } from './../../Container.js'
 import { AdminWrraper } from './admin.js'
 import { AdminMOdal } from './admin_modal/admin_modal.jsx'
 

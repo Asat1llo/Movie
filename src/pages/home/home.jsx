@@ -1,5 +1,5 @@
-import Main from '../../main/main.jsx'
-import Card from '../../card/card.jsx'
+import Main from '../../components/main/main.jsx'
+import Card from '../../components/card/card.jsx'
 
 const Home = ({giveValue})=>{
     return(
