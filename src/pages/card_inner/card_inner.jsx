@@ -1,8 +1,9 @@
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink as Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import { useState,useEffect,useRef } from 'react'
 import {Container,Img} from './../../Container.js'
-import { CardInnerWrraper, CardInnerContainer, CardInnerContainerSpan,CardInnerImg,CSection,CardInnerVideo } from './card_inner.js'
+import { CardInnerWrraper, CardInnerContainer, CardInnerContainerSpan,CardInnerImg,CSection,CardInnerVideo, CardsBack } from './card_inner.js'
+import { Loading } from '../loading/loading.jsx'
 
 import time from './../../assets/svg/cards/watch.svg'
 import calendar from './../../assets/svg/main/calender.svg'
@@ -10,6 +11,7 @@ import share from './../../assets/svg/inner-card/share.svg'
 import start from './../../assets/svg/inner-card/start.svg'
 import play from './../../assets/svg/inner-card/play-small.svg'
 import close from './../../assets/img/cards/close.png'
+import back from './../../assets/img/cards/back.png'
 
 const CardInner = ()=>{
     
@@ -22,22 +24,24 @@ const CardInner = ()=>{
         fetch(`https://64c9fecab2980cec85c2b76e.mockapi.io/movie/movie/${cardId}`)
         .then((res)=>res.json())
         .then((data)=>setData(data))
+        .catch('error')
+        .finally(<Loading/>)    
     },[])
     
-    const closeName = data?.name||name.length > 10 ? data?.name.slice(0,10)+'...' : data?.name
-    const [elname, setelName] = useState(`${closeName}`)
     
-   
     return(
-        <CSection bg={data.img}>
+        <CSection bg={data.bg}>
             <Container>
                 <CardInnerWrraper>
+                    <Link to={'/'}>
+                      <CardsBack src={back} span={'back'}/>
+                    </Link>
                     <CardInnerContainer container={'container1'}>
                         <CardInnerImg src={data.img}/>
                     </CardInnerContainer>
                     <CardInnerContainer container={'container2'}>
                         <CardInnerContainerSpan span={'episod'}>{data.action}</CardInnerContainerSpan>
-                        <CardInnerContainerSpan span={'name'} onMouseEnter={()=>{setelName(data.name)}} onMouseLeave={()=>{setelName(data.name||name.length > 10 ? data.name.slice(0,10)+'...' : data.name)}}>{elname}</CardInnerContainerSpan>
+                        <CardInnerContainerSpan span={'name'} >{data.name}</CardInnerContainerSpan>
                         <CardInnerContainer container={'container3'}>
                             <CardInnerContainerSpan span={'movie'}>Movie</CardInnerContainerSpan>
                             <CardInnerContainerSpan span={'hd'}>{data.quality}</CardInnerContainerSpan>

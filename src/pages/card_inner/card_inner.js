@@ -160,7 +160,6 @@ const CardInnerContainerClass = ({container})=>{
         line-height: 74%;
         letter-spacing: 2.147px;
         `
-
         default:return``
     }
  }
@@ -219,4 +218,10 @@ const play = ({player})=>{
 
 export const CardInnerVideo = styled.div`
 ${play}
+`
+
+export const CardsBack = styled.img`
+position: absolute;
+top: 12%;
+left: 5%;
 `

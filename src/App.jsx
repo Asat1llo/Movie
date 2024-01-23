@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
 import Global from './App.js'
+import Card from './components/card/card.jsx'
 import Header from './components/header/header.jsx'
 import Home from './pages/home/home.jsx'
 import CardInner from './pages/card_inner/card_inner.jsx'
