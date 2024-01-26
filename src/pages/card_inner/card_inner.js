@@ -181,33 +181,33 @@ const play = ({player})=>{
         height: 400px;
         border-radius: 15px;
         position: absolute;
-        transition: 0.4s linear;
+        transition: 0.6s all;
         top:25%;
         left:25%;
         bottom:0;
         right:0;
-        background-color: red;
+        background-color:transparent;   
         `
         case 'playOf': return`
           width: 650px;
           height: 400px;
           border-radius: 15px;
           position: absolute;
-          transition: 0.4s linear;
-          top:-62%;
+          transition: 0.6s all;
+          top:-150%;
           left:25%;
           bottom:0;
           right:0;
-          background-color: red;
+          background-color:transparent;
          `    
         default:return`
          width: 650px;
          height: 400px;
          border-radius: 15px;
-         background-color: red;
+         background-color:transparent;
          position: absolute;
-         transition: 0.4s linear;
-         top:-62%;
+         transition: 0.6s all;
+         top:-150%;
          left:25%;
          bottom:0;
          right:0;
@@ -224,4 +224,5 @@ export const CardsBack = styled.img`
 position: absolute;
 top: 12%;
 left: 5%;
+
 `

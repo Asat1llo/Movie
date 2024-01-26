@@ -26,7 +26,9 @@ function Header({setGiveValue}) {
                     <HeaderContainer>
                         <HeaderSearch setGiveValue={setGiveValue} />
                         <HeaderSelect/>
+                        <Link to={'/login'}>
                         <HeaderBtn>SIGN IN</HeaderBtn>
+                        </Link>
                     </HeaderContainer>
                 </HeaderWrraper>
             </Container>
