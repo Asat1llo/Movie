@@ -5,7 +5,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 padding: 150px 0px 150px 0px;
-background-color: red;
 `
 
 
@@ -15,7 +14,7 @@ export const LoginContainer = styled.div`
  justify-content: center;
  padding: 40px;
  align-items: center;
- gap: 3vw;
+ gap: 2.5vw;
  border-radius: 5px;
  background-color: rgba(0,0,0,30%);
 `
@@ -26,7 +25,7 @@ const loginContainerItemsSwitch = ({container})=>{
         display:flex;
         justify-content:space-between;
         align-items:center;
-        gap:2vw;
+        gap:1.5vw;
         `
             
         case 'containerInput':return`
@@ -50,12 +49,22 @@ const loginInputsSwitch = ({input})=>{
         width:290px;
         height:50px;
         padding:10px 10px 10px 30px;
+        border-radius:5px;
+        border:none;
+        &:focus{
+            outline:none;
+        }
         `   
             
         case 'password':return`
         width:290px;
         height:50px;
         padding:10px 10px 10px 30px;
+        border-radius:5px;
+        border:none;
+        &:focus{
+            outline:none;
+        }
         `
 
         case 'history':return`

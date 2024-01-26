@@ -18,9 +18,10 @@ const Login = ()=>{
                 <LoginContainerItems container={'containerInput'}>
                     <LoginInputs input={'email'} type='email' placeholder='Email' />
                     <LoginInputs input={'password'} type='password' placeholder='Password'/>
-                    <LoginInputs input={'history'} type='radio'/>
+                    {/* <LoginInputs input={'history'} type='radio'/> */}
                 </LoginContainerItems>
                 <LoginInputs input={'btn'} type='submit' value='LOGIN'/>
+                <LoginText text={'forgote'}>Forget Password</LoginText>
             </LoginContainer>   
           </LoginWrraper>
         </Container>
