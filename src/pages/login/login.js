@@ -78,6 +78,7 @@ const loginInputsSwitch = ({input})=>{
         color:white;
         font-size:20px;
         font-weight:600;
+        background-color:black;
         `
 
         default:return``

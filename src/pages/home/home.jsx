@@ -1,11 +1,11 @@
 import Main from '../../components/main/main.jsx'
 import Card from '../../components/card/card.jsx'
 
-const Home = ({giveValue})=>{
+const Home = ({giveValue, data,loading})=>{
     return(
         <>
         <Main/>
-        <Card giveValue={giveValue}/>
+        <Card giveValue={giveValue} data={data} loading={loading}/>
         </>
     )
 }

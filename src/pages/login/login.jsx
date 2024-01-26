@@ -7,7 +7,7 @@ import password from './../../assets/img/input/protection.png'
 
 const Login = ()=>{
     return(
-      <Section>
+      <Section section={'login'}>
         <Container>
           <LoginWrraper>
             <LoginContainer>

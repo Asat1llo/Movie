@@ -12,6 +12,7 @@ import start from './../../assets/svg/inner-card/start.svg'
 import play from './../../assets/svg/inner-card/play-small.svg'
 import close from './../../assets/img/cards/close.png'
 import back from './../../assets/img/cards/back.png'
+import axios from 'axios'
 
 const CardInner = ()=>{
     
@@ -19,17 +20,25 @@ const CardInner = ()=>{
     const [data, setData]= useState([])
     const [playvideo, setPlayVideo]= useState()
     const [playt , setPlayt] = useState(false)
+    const [loading, setLoading]= useState(false)
+
     
     useEffect(()=>{
-        fetch(`https://64c9fecab2980cec85c2b76e.mockapi.io/movie/movie/${cardId}`)
-        .then((res)=>res.json())
-        .then((data)=>setData(data))
-        .catch('error')
-        .finally(<Loading/>)    
+        setLoading(true)
+        const getData = async ()=>{
+        const res = await axios.get(`https://64c9fecab2980cec85c2b76e.mockapi.io/movie/movie/${cardId}`)
+        setData(res.data)
+         setLoading(false)
+        }
+        getData()
     },[])
+
+    if(loading){
+        return <h1>Loading...</h1>
+    }
+
     
-    
-    return(
+    else return(
         <CSection bg={data.bg}>
             <Container>
                 <CardInnerWrraper>
