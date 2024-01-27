@@ -3,6 +3,7 @@ import { Container, Section } from '../../Container.js'
 import {CardWrraper, ContainerWrraper} from './card.js'
 import CardsHeader from './cards_header/cards_header.jsx'
 import CardsContainer from './cards_container/cards_container.jsx'
+import Loding from './../../pages/Loding/index.jsx'
 
 function Card({giveValue,data,loading}){
 
@@ -11,7 +12,7 @@ function Card({giveValue,data,loading}){
    })
 
    if(loading){
-    return <h1>Loading</h1>
+    return <Loding/>
    }
    else return(
           <Section section={'section_card'} >

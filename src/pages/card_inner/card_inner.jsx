@@ -3,8 +3,8 @@ import ReactPlayer from 'react-player'
 import { useState,useEffect,useRef } from 'react'
 import {Container,Img} from './../../Container.js'
 import { CardInnerWrraper, CardInnerContainer, CardInnerContainerSpan,CardInnerImg,CSection,CardInnerVideo, CardsBack } from './card_inner.js'
-import { Loading } from '../loading/loading.jsx'
-
+import Loding from './../Loding/index.jsx'
+ 
 import time from './../../assets/svg/cards/watch.svg'
 import calendar from './../../assets/svg/main/calender.svg'
 import share from './../../assets/svg/inner-card/share.svg'
@@ -34,7 +34,7 @@ const CardInner = ()=>{
     },[])
 
     if(loading){
-        return <h1>Loading...</h1>
+        return <Loding/>
     }
 
     
