@@ -1,11 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import Global from './App.js'
-import Header from './components/header/header.jsx'
-import Home from './pages/home/home.jsx'
-import CardInner from './pages/card_inner/card_inner.jsx'
-import Admin from './pages/admin/admin.jsx'
-import { MainLogin } from './pages/login/mainLogin.jsx'
+import { Header, } from './components/index.jsx'
+import { Home, Admin, CardInner,Login } from './pages/index.jsx'
 import axios from 'axios'
 
 function App() {
@@ -32,7 +29,7 @@ function App() {
         <Route path='/' element={<Home giveValue={giveValue} data={data} loading={loading}/>}/>
         <Route path='/cardinner/:cardId' element={<CardInner/>}/>
         <Route path='/admin' element={<Admin/>}/>
-        <Route path='/login' element={<MainLogin/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
       <Global />
     </>

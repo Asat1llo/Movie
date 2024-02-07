@@ -1,9 +1,9 @@
 import { useParams, NavLink as Link } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 import { useState,useEffect,useRef } from 'react'
-import {Container,Img} from './../../Container.js'
+import {Container,Img} from '../../Container.js'
 import { CardInnerWrraper, CardInnerContainer, CardInnerContainerSpan,CardInnerImg,CSection,CardInnerVideo, CardsBack } from './card_inner.js'
-import Loding from './../Loding/index.jsx'
+import { Loding } from '../Loding/index.jsx'
  
 import time from './../../assets/svg/cards/watch.svg'
 import calendar from './../../assets/svg/main/calender.svg'
@@ -14,7 +14,7 @@ import close from './../../assets/img/cards/close.png'
 import back from './../../assets/img/cards/back.png'
 import axios from 'axios'
 
-const CardInner = ()=>{
+export const CardInner = ()=>{
     
     const {cardId} = useParams()
     const [data, setData]= useState([])
@@ -80,5 +80,3 @@ const CardInner = ()=>{
         </CSection>
     )
 }
-
-export default CardInner

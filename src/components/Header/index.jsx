@@ -6,7 +6,7 @@ import HeaderSelect from './header_select/header_select.jsx'
 
 import headerlogo from "../../assets/svg/header/logo.svg"
 
-function Header({setGiveValue}) {
+export function Header({setGiveValue}) {
     return (
         <Section section={'section_header'}>
             <Container>
@@ -35,5 +35,3 @@ function Header({setGiveValue}) {
         </Section>
     )
 }
-
-export default Header

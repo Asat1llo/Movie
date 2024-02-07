@@ -1,11 +1,11 @@
-import { Container, Section,Img } from './../../Container.js'
+import { Container, Section,Img } from '../../Container.js'
 import { LoginWrraper, LoginContainer, LoginContainerItems, LoginInputs, LoginText } from './login.js'
 
 import email from './../../assets/img/input/email.png'
 import password from './../../assets/img/input/protection.png'
 
 
-const Login = ()=>{
+const MainLogin = ()=>{
     return(
       <Section section={'login'}>
         <Container>
@@ -29,4 +29,4 @@ const Login = ()=>{
     )
 }
 
-export {Login}
+export {MainLogin}

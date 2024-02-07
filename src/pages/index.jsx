@@ -1,0 +1,5 @@
+export {Admin} from './Admin'
+export {CardInner} from './CardInner'
+export {Home} from './Home'
+export {Loding} from './Loding'
+export {Login} from './Login'

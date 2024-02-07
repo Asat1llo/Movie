@@ -1,12 +1,10 @@
 import { LoaderSpan,LoadingWrraper } from "./loading.js"
 
 
-const Loding = ()=> {
+export const Loding = ()=> {
     return(
       <LoadingWrraper>
         <LoaderSpan>Loading</LoaderSpan>
       </LoadingWrraper>
     )
 }
-
-export default Loding

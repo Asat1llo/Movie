@@ -3,9 +3,9 @@ import { Container, Section } from '../../Container.js'
 import {CardWrraper, ContainerWrraper} from './card.js'
 import CardsHeader from './cards_header/cards_header.jsx'
 import CardsContainer from './cards_container/cards_container.jsx'
-import Loding from './../../pages/Loding/index.jsx'
+import {Loding} from './../../pages/index.jsx'
 
-function Card({giveValue,data,loading}){
+export function Card({giveValue,data,loading}){
 
    const filterData = data.filter(data2 =>{
     return data2.name.toLowerCase().includes(giveValue.toLowerCase()) 
@@ -31,5 +31,3 @@ function Card({giveValue,data,loading}){
           </Section>
     )
 }
-
-export default Card

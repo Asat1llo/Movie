@@ -1,8 +1,8 @@
-import { Container , Section } from './../../Container.js'
+import { Container , Section } from '../../Container.js'
 import { AdminWrraper } from './admin.js'
 import { AdminMOdal } from './admin_modal/admin_modal.jsx'
 
-const Admin = ()=>{
+export const Admin = ()=>{
 
     return(
        <Section> 
@@ -14,5 +14,3 @@ const Admin = ()=>{
        </Section>
     )
 }
-
-export default Admin
